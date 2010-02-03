@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<blocks do-not-cache="modules_comarquage_comarquage">
+	<block type="modules_comarquage_comarquage" display="" icon="hand_paper" label="&amp;modules.comarquage.backoffice.block.Comarquage;" />
+</blocks>

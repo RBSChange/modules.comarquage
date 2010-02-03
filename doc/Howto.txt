@@ -1,0 +1,60 @@
++---------------------------------------------------------------------------+
+| This file is part of the WebEdit4 package.                                |
+| Copyright (c) 2005 RBS.                                                   |
+|                                                                           |
+| For the full copyright and license information, please view the LICENSE   |
+| file that was distributed with this source code.                          |
++---------------------------------------------------------------------------+
+| MODULE COMARQUAGE  v1.0           Author: intessit           23/04/2007   |
++---------------------------------------------------------------------------+
+
+
+How it works :
+--------------
+
+This module take information on a remote webserver (service-public.fr) and display content in page
+It's allow to have administration information without going on their website.
+Data are provided in many xml files. Thoses file are downloaded on remote server and, if needed,
+a cache is done locally to avoid remote request each ask.
+There are some xsl files which transform xml into html and display content in page.
+
+
+How to setup :
+--------------
+
+Do all these steps before accessing page in frontoffice !
+
+ - Put the block Co-marquage in a page
+   - Define cache time in hours (0 = no cache)
+   - Define city (Commune) : Write whole city name (all space will be converted by dash [-])
+       by example : write : Villeneuve la Garenne, data saved will be : Villeneuve-la-Garenne
+   - Define department (Departement) : Write whole department name (all space will be converted by dash [-])
+       by example : write : Hauts de Seine, data saved will be : Hauts-de-Seine
+       If you write directly : Hauts-de-Seine, it won't be changed
+     (@info : next version will certainly have another way to set these values, but for now it's like that :)
+   - You can delete config file, the file will be created at the first visit in frontoffice
+   - You can force to delete all cached files
+ - Tag the page with 'Page de Co-marquage' tag
+ - Define constant COMARQUAGE_XML_URL to the url of xml source if different of 'http://lecomarquage.service-public.fr/xml2/'
+ - If you override xsl update path from 'xsl-params.xsl' in the xsl file
+     - path in original module : <xsl:include href="../../../cache/xsl-params.xsl"/>
+     - path in overrided webapp module : <xsl:include href="../../../../cache/xsl-params.xsl"/>
+     
+ => You can access co-marquage page in frontoffice
+
+After that, you will have to change css for each customer by overriding frontoffice.xml file
+
+
+BE CAREFUL :
+------------
+
+When you use pear package ! Each project must create a file called xsl-params.xsl in xsl folder
+So if there is no pear repository for each project, override xsl folder in webapp !
+or all project will have same config file ! and there will be a problem soon...
+
+
+If any error occurs :
+---------------------
+
+Each time there is an error, an friendly error is displayed on frontoffice
+Each error is logged (error or fatal log), you can know exactly what failed

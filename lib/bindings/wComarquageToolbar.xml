@@ -1,0 +1,257 @@
+<bindings xmlns="http://www.mozilla.org/xbl" xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<binding id="wComarquageToolbar" extends="layout.wBlockToolbar#wBaseBlockToolbar">
+
+		<implementation>
+
+			<method name="onInitialize">
+				<body>
+					<![CDATA[
+                    var _func = "onInitialize";
+                    var _args = [];
+                    try
+                    {
+
+                    }
+                    catch (e)
+                    {
+                        this.error(_func, _args, e);
+                    }
+                    ]]>
+				</body>
+			</method>
+
+			<method name="onUpdate">
+				<body>
+					<![CDATA[
+                    var _func = "onUpdate";
+                    var _args = [];
+                    try
+                    {
+
+                    }
+                    catch (e)
+                    {
+                        this.error(_func, _args, e);
+                    }
+             		]]>
+				</body>
+			</method>
+
+			<method name="setCacheHour">
+				<body>
+					<![CDATA[
+                    var _func = "setCacheHour";
+                    var _args = [];
+                    try
+                    {
+                    		var nbCacheHour = document.getElementById('nbCacheHour').value;
+                    		if(!isNaN(nbCacheHour))
+												{
+                        	this.setBlockAttribute('display', 'nbcachehour', nbCacheHour);
+                        	this.refreshBlock();
+                        }
+                        else
+                        {
+                        	alert('Erreur : La durée du cache doit être un nombre.');
+                        }
+
+                    }
+                    catch (e)
+                    {
+                        this.error(_func, _args, e);
+                    }
+                    ]]>
+				</body>
+			</method>
+
+			<method name="getCacheHour">
+				<body>
+					<![CDATA[
+                    var _func = "getCacheHour";
+                    var _args = [];
+                    try
+                    {
+											var nbCacheHour = this.getBlockAttribute('display','nbcachehour');
+											document.getElementById('nbCacheHour').setAttribute('value',nbCacheHour);
+                    }
+                    catch (e)
+                    {
+                        this.error(_func, _args, e);
+                    }
+                    ]]>
+				</body>
+			</method>
+
+			<method name="setCommune">
+				<body>
+					<![CDATA[
+                    var _func = "setCommune";
+                    var _args = [];
+                    try
+                    {
+												var commune = document.getElementById('commune').value;
+                        this.setBlockAttribute('display', 'commune', commune);
+                        this.refreshBlock();
+
+                    }
+                    catch (e)
+                    {
+                        this.error(_func, _args, e);
+                    }
+                    ]]>
+				</body>
+			</method>
+
+			<method name="getCommune">
+				<body>
+					<![CDATA[
+                    var _func = "getCommune";
+                    var _args = [];
+                    try
+                    {
+											var commune = this.getBlockAttribute('display','commune');
+											document.getElementById('commune').setAttribute('value',commune);
+                    }
+                    catch (e)
+                    {
+                        this.error(_func, _args, e);
+                    }
+                    ]]>
+				</body>
+			</method>
+
+			<method name="setDepartment">
+				<body>
+					<![CDATA[
+                    var _func = "setDepartment";
+                    var _args = [];
+                    try
+                    {
+												var dep = document.getElementById('dep').value;
+                        this.setBlockAttribute('display', 'department', dep);
+                        this.refreshBlock();
+
+                    }
+                    catch (e)
+                    {
+                        this.error(_func, _args, e);
+                    }
+                    ]]>
+				</body>
+			</method>
+
+			<method name="getDepartment">
+				<body>
+					<![CDATA[
+                    var _func = "getDepartment";
+                    var _args = [];
+                    try
+                    {
+											var dep = this.getBlockAttribute('display','department');
+											document.getElementById('dep').setAttribute('value',dep);
+                    }
+                    catch (e)
+                    {
+                        this.error(_func, _args, e);
+                    }
+                    ]]>
+				</body>
+			</method>
+
+			<method name="clearCache">
+				<body>
+					<![CDATA[
+	p = new XMLHttpRequest();
+	p.onload = null;
+	var url = Context.UIBASEURL + "/xul_controller.php?module=comarquage&action=Clearcache";
+	p.open("GET", url, false);
+	p.send(null);
+    var xmlResponse = p.responseXML.getElementsByTagName('status').item(0);
+    if (xmlResponse.firstChild.data == "OK")
+    {
+        var message = new wLocale("&modules.comarquage.bo.general.clear-cache-success;");
+        alert(message.toString());
+    }
+    else
+    {
+        var message = new wLocale("&modules.comarquage.bo.general.clear-cache-error;");
+        message.setAttribute("error", "");
+        alert(message.toString());
+    }
+                    ]]>
+				</body>
+			</method>
+
+			<method name="clearConfig">
+				<body>
+					<![CDATA[
+	var answer;
+	p = new XMLHttpRequest();
+	p.onload = null;
+	var url = Context.UIBASEURL + "/xul_controller.php?module=comarquage&action=Clearconfig";
+	p.open("GET", url, false);
+	p.send(null);
+    var xmlResponse = p.responseXML.getElementsByTagName('status').item(0);
+    if (xmlResponse.firstChild.data == "OK")
+    {
+        var message = new wLocale("&modules.comarquage.bo.general.clear-config-success;");
+        alert(message.toString());
+    }
+    else
+    {
+        var message = new wLocale("&modules.comarquage.bo.general.clear-config-error;");
+        message.setAttribute("error", "");
+        alert(message.toString());
+    }
+                    ]]>
+				</body>
+			</method>
+		</implementation>
+
+		<xbl:content xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:xbl="http://www.mozilla.org/xbl" xmlns:html="http://www.w3.org/1999/xhtml" orient="vertical">
+			<toolbar anonid="toolbar" flex="1" align="center">
+
+				<label control="nbCacheHour" value="&amp;modules.comarquage.backoffice.toolbar.Number-hour-cache;" />
+				<toolbarbutton image="{HttpHost}/icons/small/refresh.png" oncommand="getCacheHour();" />
+				<textbox id="nbCacheHour" size="2" value=""/>
+				<toolbarbutton image="{HttpHost}/icons/small/arrow_left_green.png" label="&amp;modules.comarquage.backoffice.toolbar.Valid;" oncommand="setCacheHour();" />
+
+				<toolbarseparator><label value="" class="plain"/></toolbarseparator>
+
+				<label control="commune" value="&amp;modules.comarquage.backoffice.toolbar.Commune;" />
+				<toolbarbutton image="{HttpHost}/icons/small/refresh.png" oncommand="getCommune();" />
+				<textbox id="commune" size="15" value=""/>
+				<toolbarbutton image="{HttpHost}/icons/small/arrow_left_green.png" label="&amp;modules.comarquage.backoffice.toolbar.Valid;" oncommand="setCommune();" />
+
+				<toolbarseparator><label value="" class="plain"/></toolbarseparator>
+
+				<label control="dep" value="&amp;modules.comarquage.backoffice.toolbar.Department;" />
+				<toolbarbutton image="{HttpHost}/icons/small/refresh.png" oncommand="getDepartment();" />
+				<textbox id="dep" size="15" value=""/>
+				<toolbarbutton image="{HttpHost}/icons/small/arrow_left_green.png" label="&amp;modules.comarquage.backoffice.toolbar.Valid;" oncommand="setDepartment();" />
+
+			</toolbar>
+			<toolbar anonid="toolbar" flex="1" align="center">
+
+				<toolbarbutton image="{HttpHost}/icons/small/document_delete.png" label="&amp;modules.comarquage.backoffice.toolbar.Clearconfig;" oncommand="clearConfig();" />
+
+				<toolbarseparator><label value="" class="plain"/></toolbarseparator>
+
+				<toolbarbutton image="{HttpHost}/icons/small/data_delete.png" label="&amp;modules.comarquage.backoffice.toolbar.Clearcache;" oncommand="clearCache();" />
+
+				<toolbarseparator><label value="" class="plain"/></toolbarseparator>
+<!--
+				<toolbarbutton image="{HttpHost}/icons/small/wactionredirect.png" label="&amp;modules.comarquage.backoffice.toolbar.Installcron;" oncommand="installCron();" />
+
+				<toolbarseparator><label value="" class="plain"/></toolbarseparator>
+
+				<toolbarbutton image="{HttpHost}/icons/small/gears_stop.png" label="&amp;modules.comarquage.backoffice.toolbar.Uninstallcron;" oncommand="uninstallCron();" />
+				<label id="hiddenlabel" value="&amp;modules.comarquage.backoffice.toolbar.Confirmcron;" hidden="true" />
+-->
+			</toolbar>
+		</xbl:content>
+
+	</binding>
+</bindings>
