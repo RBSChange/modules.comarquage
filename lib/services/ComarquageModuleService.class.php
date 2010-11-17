@@ -141,7 +141,7 @@ class comarquage_ComarquageModuleService extends f_persistentdocument_DocumentSe
 				}
 				if (Framework::isDebugEnabled())
 				{
-					Framework::debug(f_util_StringUtils::var_dump_desc($contentInitFile));
+					Framework::debug(var_export($contentInitFile, true));
 				}
 				if(file_put_contents($configFile, implode('',$contentInitFile)) === false)
 				{
