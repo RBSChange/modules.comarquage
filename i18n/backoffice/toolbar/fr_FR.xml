@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.comarquage.backoffice.toolbar" lcid="fr_FR">
+  <key id="number-hour-cache">durée du cache (heures) : </key>
+  <key id="valid">valider</key>
+  <key id="commune">commune : </key>
+  <key id="department">département : </key>
+  <key id="clearconfig">Réinitialiser la configutarion</key>
+  <key id="clearcache">vider les caches</key>
+  <key id="installcron">installer le CRON</key>
+  <key id="uninstallcron">désinstaller le CRON</key>
+  <key id="confirmcron">la suppression du CRON rend les caches permanents. Etes-vous sur de vouloir supprimer le CRON ?</key>
+</i18n>

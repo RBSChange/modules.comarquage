@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.comarquage.backoffice.error" lcid="en_GB">
+  <key id="clearconfig">error : The file was not deleted.</key>
+  <key id="clearcache">error : All cache files were not deleted.</key>
+  <key id="cronexist">the CRON is already installed.</key>
+  <key id="cronnotexist">the CRON is not installed.</key>
+  <key id="cronerror">error : the CRON was not correclty installed.</key>
+</i18n>

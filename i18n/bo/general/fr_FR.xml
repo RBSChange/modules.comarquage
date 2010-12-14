@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.comarquage.bo.general" lcid="fr_FR">
+  <key id="module-name">co-marquage</key>
+  <key id="tree-root-name">co-marquage</key>
+  <key id="system-folder-name">co-marquage</key>
+  <key id="clear-cache-success">Le cache à été éffacé avec succés.</key>
+  <key id="clear-cache-error">Une erreur est survenue lors de l'éffacement du cache!</key>
+  <key id="clear-config-success">La configuration à été réinitialisée avec succés.</key>
+  <key id="clear-config-error">Une erreur est survenue lors de l'éffacement de la configuration!</key>
+</i18n>

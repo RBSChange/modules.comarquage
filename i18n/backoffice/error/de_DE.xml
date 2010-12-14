@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.comarquage.backoffice.error" lcid="de_DE">
+  <key id="clearconfig">Fehler: die Datei konnte nicht gelöscht werden.</key>
+  <key id="clearcache">Fehler: alle Cache Dateien konnten nicht gelöscht werden.</key>
+  <key id="cronexist">Der CRON ist schon installiert.</key>
+  <key id="cronnotexist">Der CRON ist nicht installiert.</key>
+  <key id="cronerror">Fehler: der CRON wurde nicht korrekt installiert.</key>
+</i18n>

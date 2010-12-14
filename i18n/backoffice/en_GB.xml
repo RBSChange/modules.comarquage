@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.comarquage.backoffice" lcid="en_GB">
+  <key id="modulename">co-marquage</key>
+  <key id="tagmissing">the page should be tagged in order to work</key>
+  <key id="tagok">co-marquage block</key>
+  <key id="error">error during process. Website administrator has been alerted. Sorry for inconvenience.</key>
+</i18n>

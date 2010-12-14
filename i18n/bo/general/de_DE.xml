@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.comarquage.bo.general" lcid="de_DE">
+  <key id="module-name">co-Markierung</key>
+  <key id="tree-root-name">co-Markierung</key>
+  <key id="system-folder-name">co-Markierung</key>
+  <key id="clear-cache-success">Der Cache wurde erfolgreich gelöscht.</key>
+  <key id="clear-cache-error">Ein Fehler ist bei der Löschung des Cache aufgetreten!</key>
+  <key id="clear-config-success">Die Konfiguration wurde erfolgreich re-initialisiert.</key>
+  <key id="clear-config-error">Ein Fehler ist bei der Löschung der Konfiguration aufgetreten!</key>
+</i18n>

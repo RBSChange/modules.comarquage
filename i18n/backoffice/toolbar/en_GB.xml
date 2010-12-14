@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.comarquage.backoffice.toolbar" lcid="en_GB">
+  <key id="number-hour-cache">time of cache (hours): </key>
+  <key id="valid">submit</key>
+  <key id="commune">city: </key>
+  <key id="department">department: </key>
+  <key id="clearconfig">Delete settings</key>
+  <key id="clearcache">remove all caches</key>
+  <key id="installcron">install CRON</key>
+  <key id="uninstallcron">uninstall CRON</key>
+  <key id="confirmcron">CRON deletion make caches permanent. Are you sure to delete the CRON ?</key>
+</i18n>

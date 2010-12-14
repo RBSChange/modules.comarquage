@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.comarquage.backoffice" lcid="de_DE">
+  <key id="modulename">co-Markierung</key>
+  <key id="tagmissing">Damit das Modul richtig funktionniert, muss die Seite getagged sein</key>
+  <key id="tagok">Inhaltblock für die co-Markierung</key>
+  <key id="error">Verarbeitungsfehler. Der Webseitenadministrator wurde benachrichtigt. Entschuldigen Sie bitte die Störung.</key>
+</i18n>
